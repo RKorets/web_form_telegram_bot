@@ -17,20 +17,14 @@ from sender import send_email
 
 storage = MemoryStorage()
 logging.basicConfig(level=logging.INFO)
-bot = Bot('5364730129:AAHv-paZXNqilKumreUVonDzftTA7TC37bA')
+bot = Bot('YOU_API_TOKEN')
 
 dp = Dispatcher(bot=bot, storage=storage)
 admin_list = [368553201]
 
 
 class Form(StatesGroup):
-    custom_account = State()
-    add_admin = State()
-    tech_order = State()
     tech_answer = State()
-    spam = State()
-    admin_add_description = State()
-    admin_add_account = State()
 
 
 def auth(func):
